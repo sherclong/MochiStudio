@@ -9,15 +9,19 @@ public class demo : MonoBehaviour
     public GameObject ingredientGroup;
     public GameObject recipeGroup;
 
+    public Text waterText;
+    public Text flourText;
+
+    public Button enterButton;
+
     void Start()
     {
-
-
+        enterButton.onClick.AddListener(GetSelectedToggle);
     }
 
     void Update()
     {
-        GetSelectedToggle();
+        
     }
 
     public void GetSelectedToggle()
@@ -28,10 +32,19 @@ public class demo : MonoBehaviour
             if (t.isOn)
             {
                 string name = t.name;
-                Debug.Log(name);
+                if (name == "water")
+                {
+                    waterText.text = "x 1";
+                }
+                else if (name == "flour")
+                {
+                    flourText.text = "x 1";
+                }
+                //Debug.Log(name);
             }
-            Debug.Log("none");
+            //Debug.Log("none");
         }
+
     }
 
 }

@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 214923047}
   - component: {fileID: 214923046}
   m_Layer: 5
-  m_Name: Water
+  m_Name: Water Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -783,8 +783,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 454.6, y: -15.9}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 403.80008, y: -18.380896}
+  m_SizeDelta: {x: 58.4, y: 34.9618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214923046
 MonoBehaviour:
@@ -3119,7 +3119,7 @@ GameObject:
   - component: {fileID: 615596989}
   - component: {fileID: 615596988}
   m_Layer: 5
-  m_Name: Flour
+  m_Name: Flour Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3141,8 +3141,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 358, y: -15.9}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 307.14185, y: -15.9}
+  m_SizeDelta: {x: 58.2838, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615596988
 MonoBehaviour:
@@ -7189,6 +7189,7 @@ GameObject:
   - component: {fileID: 1535597471}
   - component: {fileID: 1535597470}
   - component: {fileID: 1535597469}
+  - component: {fileID: 1535597473}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -7297,6 +7298,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1535597473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535597468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22f6a6b153a50a4f93ca107edc702d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientGroup: {fileID: 293947965}
+  recipeGroup: {fileID: 2055136831}
+  waterText: {fileID: 615596988}
+  flourText: {fileID: 214923046}
 --- !u!1 &1566781250
 GameObject:
   m_ObjectHideFlags: 0
