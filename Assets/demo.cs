@@ -13,6 +13,8 @@ public class demo : MonoBehaviour
     public Text flourText;
     public Text otherText;
     public Text scoreText;
+    public Text comment;
+    public Text dough;
 
     public Button enterButton;
     public Button buyButton;
@@ -21,6 +23,7 @@ public class demo : MonoBehaviour
     {
         enterButton.onClick.AddListener(GetSelectedToggle);
         buyButton.onClick.AddListener(BuyRecipe);
+        comment.text = "It's your turn! Select ingredients or buy a recipe.";
     }
 
     void Update()
@@ -53,6 +56,7 @@ public class demo : MonoBehaviour
                 }
             }
             //Debug.Log("none");
+            StartCoroutine(textChange());
         }
 
     }
@@ -70,11 +74,20 @@ public class demo : MonoBehaviour
                 flourText.text = "x 0";
                 scoreText.text = "Score: 01";
                 t.isOn = false;
+                dough.text = "Batter";
+                comment.text = "You purchased Dough, your current score is 01";
 
                 //Debug.Log(name);
             }
             //Debug.Log("none");
         }
+    }
+
+    IEnumerator textChange()
+    {
+        comment.text = "Wait for your opponent to make their move...";
+        yield return new WaitForSeconds(5);
+        comment.text = "It's your turn! Select ingredients or buy a recipe.";
     }
 
 }
