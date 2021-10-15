@@ -16,21 +16,21 @@ public class Player : MonoBehaviour
     public GameObject ing9;
     //public GameObject[] ingredientsList;
 
-    public Dictionary<GameObject, int> ingredientDict = new Dictionary<GameObject, int>();
+    public Dictionary<int, int> ingredientDict = new Dictionary<int, int>();
     public Dictionary<GameObject, int> recipeDict = new Dictionary<GameObject, int>();
 
     // Start is called before the first frame update
     void Start()
     {
-        ingredientDict[ing1] = 0;
-        ingredientDict[ing2] = 0;
-        ingredientDict[ing3] = 0;
-        ingredientDict[ing4] = 0;
-        ingredientDict[ing5] = 0;
-        ingredientDict[ing6] = 0;
-        ingredientDict[ing7] = 0;
-        ingredientDict[ing8] = 0;
-        ingredientDict[ing9] = 0;
+        ingredientDict[0] = 0;
+        ingredientDict[1] = 0;
+        ingredientDict[2] = 0;
+        ingredientDict[3] = 0;
+        ingredientDict[4] = 0;
+        ingredientDict[5] = 0;
+        ingredientDict[6] = 0;
+        ingredientDict[7] = 0;
+        ingredientDict[8] = 0;
     }
 
     // Update is called once per frame
@@ -48,15 +48,14 @@ public class Player : MonoBehaviour
         recipeDict.Add(card, 1);
     }
 
-    public void selectIngredients(GameObject card1, GameObject card2, GameObject card3)
+    public void selectIngredients(int card)
     {
         //same problem as above
-        ingredientDict.Add(card1, 1);
-        ingredientDict.Add(card2, 1);
-        ingredientDict.Add(card3, 1);
+        ingredientDict[card] += 1;
+        Debug.Log("Card val:" + ingredientDict[card]);
     }
 
-    public void containsIngredient(GameObject card)
+    public void containsIngredient(int card)
     {
         if (ingredientDict.ContainsKey(card) == true)
         {
